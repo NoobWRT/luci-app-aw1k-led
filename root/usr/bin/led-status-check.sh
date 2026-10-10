@@ -1,4 +1,11 @@
 #!/bin/sh
+#=================================================
+# Copyright (c) 2026 Lahiru S Liyanage (NoobLK) <liyanagelsofficial@gmail.com>
+# GitHub: https://github.com/nooblk-98/luci-app-aw1k-led
+# Telegram: @itsme_nooblk
+# License: GPL-3.0-or-later
+#=================================================
+
 # AW1000 LED Status Monitor
 # Reads thresholds, colors and settings from UCI: uci get ledstatus.settings.*
 
