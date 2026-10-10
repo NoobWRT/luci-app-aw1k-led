@@ -120,6 +120,18 @@ else
     echo "WiFi: Enabled"
 fi
 
+# ─── Phone ───────────────────────────────────────────────────────────────────
+# The phone service (aw1000-rj11) sets the phone LED on every line change;
+# re-sync it here in case something else touched it. Off without the phone.
+if [ -x /usr/sbin/rj11_led ]; then
+    /usr/sbin/rj11_led
+    echo "Phone: LED follows the phone line"
+else
+    echo none > /sys/class/leds/green:phone/trigger
+    echo 0    > /sys/class/leds/green:phone/brightness
+    echo "Phone: not installed, LED off"
+fi
+
 # ─── CSQ Signal ───────────────────────────────────────────────────────────────
 CSQ=$(sms_tool -d "$COMM" at 'at+csq' 2>/dev/null \
     | grep -oE '\+csq: [0-9]+,[0-9]+' \

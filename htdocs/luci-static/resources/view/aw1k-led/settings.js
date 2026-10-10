@@ -233,7 +233,8 @@ return view.extend({
             '<li>' + _('Enable: turns off all status LEDs, sets crons for daily schedule') + '</li>',
             '<li>' + _('If current time is inside the night window, LEDs turn off immediately') + '</li>',
             '<li>' + _('Disable: clears crons, restores LED service') + '</li>',
-            '<li>' + _('Power LED stays on solid. Phone LED slow-blinks during night') + '</li>',
+            '<li>' + _('Power LED double-blinks as the night indicator') + '</li>',
+            '<li>' + _('Phone LED stays off at night, except while a call is ringing') + '</li>',
             '</ul></div>'
         ].join('');
 
