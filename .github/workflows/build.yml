@@ -56,6 +56,7 @@ jobs:
           sdk-version: ${{ matrix.sdk_version }}
           sdk-target: x86
           sdk-subtarget: "64"
+          sdk-cache-key-override: "${{ matrix.sdk_version }}-v1.0.6"
           artifact-name: luci-app-aw1k-led-${{ matrix.sdk_version }}
 
   release:
